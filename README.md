@@ -27,3 +27,59 @@ Bromeas, verdad? No puedo ir a hablar alla arriba y decir: **HOLA QUIERO UN TERC
 
 ~~Aunque, si hubiese estado alcoholizado tal vez hubiese corrido tal riesgo... tal vez...~~
 ## Archivos del proyecto
+Vale, esto es complejo. Vayamos por partes, vamos primero a los plugins, que es sencillo.
+
+Los archivos plugins son:
+
+1. **TPvP.as**
+   - Este es el plugin TPvP principal. La mayoria de sus funciones se encuentran aqui y son independientes, si los plugins adicionales no pueden correr, el TPvP puede aun seguir ejecutandose para los jugadores, aunque con funcionabilidad limitada.
+2. **TPvP_Helper.sma**
+   - Este plugin provee un pequeño impulso a las funciones faltantes que el TPvP utiliza en ciertos mapas. Primordialmente mapas DMC que utilizan su propio sistema de armadura.
+3. **GHW_Custom_Nextmap.sma**
+   - Tal como su nombre lo indica, este es el plugin RTV original de GHW, modificado para su uso en el proyecto. Sus diferencias son limitaciones en el "nominate", y avisar al plugin principal cuando un mapa finaliza. Algo sumamente util para que los jugadores puedan subir de nivel.
+
+Los archivos map scripts son mayoria, con una aclaracion; Todas las armas disponen de scripts adicionales para que sus funcionamientos sean lo mas identicos posibles a sus mods originales. Estos archivos son:
+
+1. **-carpeta- cs16**
+   - Scripts de todas las armas Counter-Strike, en adicion a la C4, y la armadura del mod. Dentro de esta carpeta tambien se encuentra el script principal para usarse en mapas de categoria **cs_**.
+2. **-carpeta- dmc_weapons**
+   - Scripts de todas las armas DeathMatch Classic, en adicion a la armadura del mod.
+3. **-carpeta- dod_weapons**
+   - Scripts de todas las armas Day of Defeat, en adicion a una entidad personalida imitando los Puntos de Control de tal mod.
+4. **-carpeta- hl_weapons**
+   - Scripts de todas las armas clasicas del Half-Life.
+5. **-carpeta- hlsp**
+   - Scripts para complementar los mapas de la categoria HL. Contienen los cargadores clasicos de vida/armadura.
+6. **-carpeta- hq2_weapons**
+   - Scripts de armas del mod HalfQuake: Amen.
+7. **-carpeta- misc_weapons**
+   - Scripts de armas miscelaneas de uso especifico.
+8. **IM.as**
+   - Script para usarse en mapas de categoria **aim_ig_**.
+9. **TPvP_DMCMap.as**
+   - Script para usarse en mapas de categoria **dmc_**.
+10. **TPvP_DODMap.as**
+   - Script para usarse en mapas de categoria **dod_**.
+11. **TPvP_FUNMap01.as**
+   - Script de sistema que se usa en el mapa **fun_hide_n_seek** y **fun_hide_n_seek2**.
+12. **TPvP_FUNMap02.as**
+   - Script de sistema que se usa en el mapa **fun_big_city2**.
+13. **TPvP_FUNMap03.as**
+   - Script de sistema que se usa en el mapa **fun_clue_3**.
+14. **TPvP_FUNMap04.as**
+   - Script de sistema que se usa en el mapa **fun_big_city**.
+15. **TPvP_FUNMap05.as**
+   - Script de sistema que se usa en el mapa **fun_darkmines**.
+16. **TPvP_FUNMap06.as**
+   - Script de sistema que se usa en el mapa **fun_hq2_phoenix**.
+17. **TPvP_HLMap.as**
+   - Script para usarse en mapas de categoria **hl_**.
+18. **TPvP_SCMap.as**
+   - **DELETED** | Este script es un viejo remanente de la antigua categoria de mapas **sc_** que nunca pudo ver la luz del dia.
+19. **UTIL_GetDefaultShellInfo.as**
+   - Script auxiliar utilizado por las armas CS y DoD.
+## Una nota sobre los archivos
+El proyecto solamente contendra el codigo fuente, no provere de los sonidos/models/sprites o cualquier otro archivo adicional que el proyecto utiliza en su codigo. Y solicito que por favor se mantenga asi, aunque estoy abierto a negociar esta regla.
+
+Si decides compilar y utilizar los codigos para tu propio uso tendras que inventar sus propios archivos adicionales que el proyecto utilize, o bien desactivarlos por completo.
+## Instrucciones de compilacion/instalacion
