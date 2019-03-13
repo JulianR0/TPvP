@@ -11,7 +11,7 @@ Este proyecto surgio en las primeras actualizaciones de Sven Co-op, lo que signi
 ## Porque mezclar tanto AngelScript como AMX Mod X para este sistema?
 ~~Cuantas veces he hecho copypaste y repetido casi lo mismo?~~
 
-AngelScript carece de ciertas utilidades especificas que solo el AMX Mod X tiene. No repetire el mismo texto tres veces asi que ire al grano. El proyecto requiere del hookeo de comandos y mensajes especificos del motor que solo AMXX provee. Siendo los mas primordiales **register_clcmd* y **register_message* para hookear mensajes **SVC_TEMPENTITY**. Los desarrolladores jamas van a implementar tales funciones al AngelScript por razones que no escribire aca ya que se volveria en un "rant".
+AngelScript carece de ciertas utilidades especificas que solo el AMX Mod X tiene. No repetire el mismo texto tres veces asi que ire al grano. El proyecto requiere del hookeo de comandos y mensajes especificos del motor que solo AMXX provee. Siendo los mas primordiales **register_clcmd** y *register_message* para hookear mensajes **SVC_TEMPENTITY**. Los desarrolladores jamas van a implementar tales funciones al AngelScript por razones que no escribire aca ya que se volveria en un "rant".
 ## Porque mezclar plugins y map scripts?
 Antiguamente, era la unica forma de hacer funcionar los scripts de armas en los mapas, ya que en el pasado, no se podian registrar entidades personalizadas en un plugin. Hoy en dia es posible pero aun asi decidi dejarlo por separado por razones de comodidad, y no hablo por mi mismo, sino por los jugadores que entren a los servidores. Ya veras de lo que estoy hablando.
 ## Porque "TPvP"?
