@@ -59,25 +59,25 @@ Los archivos map scripts son mayoria, con una aclaracion; Todas las armas dispon
 9. **TPvP_DMCMap.as**
    - Script para usarse en mapas de categoria **dmc_**.
 10. **TPvP_DODMap.as**
-   - Script para usarse en mapas de categoria **dod_**.
+    - Script para usarse en mapas de categoria **dod_**.
 11. **TPvP_FUNMap01.as**
-   - Script de sistema que se usa en el mapa **fun_hide_n_seek** y **fun_hide_n_seek2**.
+    - Script de sistema que se usa en el mapa **fun_hide_n_seek** y **fun_hide_n_seek2**.
 12. **TPvP_FUNMap02.as**
-   - Script de sistema que se usa en el mapa **fun_big_city2**.
+    - Script de sistema que se usa en el mapa **fun_big_city2**.
 13. **TPvP_FUNMap03.as**
-   - Script de sistema que se usa en el mapa **fun_clue_3**.
+    - Script de sistema que se usa en el mapa **fun_clue_3**.
 14. **TPvP_FUNMap04.as**
-   - Script de sistema que se usa en el mapa **fun_big_city**.
+    - Script de sistema que se usa en el mapa **fun_big_city**.
 15. **TPvP_FUNMap05.as**
-   - Script de sistema que se usa en el mapa **fun_darkmines**.
+    - Script de sistema que se usa en el mapa **fun_darkmines**.
 16. **TPvP_FUNMap06.as**
-   - Script de sistema que se usa en el mapa **fun_hq2_phoenix**.
+    - Script de sistema que se usa en el mapa **fun_hq2_phoenix**.
 17. **TPvP_HLMap.as**
-   - Script para usarse en mapas de categoria **hl_**.
+    - Script para usarse en mapas de categoria **hl_**.
 18. **TPvP_SCMap.as**
-   - **DELETED** | Este script es un viejo remanente de la antigua categoria de mapas **sc_** que nunca pudo ver la luz del dia.
+    - **DELETED** | Este script es un viejo remanente de la antigua categoria de mapas **sc_** que nunca pudo ver la luz del dia.
 19. **UTIL_GetDefaultShellInfo.as**
-   - Script auxiliar utilizado por las armas CS y DoD.
+    - Script auxiliar utilizado por las armas CS y DoD.
 ## Una nota sobre los archivos
 El proyecto solamente contendra el codigo fuente, no provere de los sonidos/models/sprites o cualquier otro archivo adicional que el proyecto utiliza en su codigo. Y solicito que por favor se mantenga asi, aunque estoy abierto a negociar esta regla.
 
