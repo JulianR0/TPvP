@@ -14,8 +14,6 @@ Este proyecto surgio en las primeras actualizaciones de Sven Co-op, lo que signi
 AngelScript carece de ciertas utilidades especificas que solo el AMX Mod X tiene. No repetire el mismo texto tres veces asi que ire al grano. El proyecto requiere del hookeo de comandos y mensajes especificos del motor que solo AMXX provee. Siendo los mas primordiales **register_clcmd** y *register_message* para hookear mensajes **SVC_TEMPENTITY**. Los desarrolladores jamas van a implementar tales funciones al AngelScript por razones que no escribire aca ya que se volveria en un "rant".
 ## Porque mezclar plugins y map scripts?
 Antiguamente, era la unica forma de hacer funcionar los scripts de armas en los mapas, ya que en el pasado, no se podian registrar entidades personalizadas en un plugin. Hoy en dia es posible pero aun asi decidi dejarlo por separado por razones de comodidad, y no hablo por mi mismo, sino por los jugadores que entren a los servidores. Ya veras de lo que estoy hablando.
-## Porque "TPvP"?
-Ironicamente, el sistema del servidor Team DeathMatch nunca tuvo un nombre oficial como lo consiguieron el SCXPM y/o SDX. Quedandose desde su historia con su nombre interno de desarrollador "TPvP". Aunque considerando las situaciones, este nombre interno de TPvP o bien Team DeathMatch son los mejores nombres que este proyecto puede tener. Pero ya que estas leyendo esto, seguramente quieras darle un nuevo nombre a este sistema, eh?
 ## Que ocurrio con el servidor Team DeathMatch?
 Antes de los cortes de presopuesto, el servidor tenia su propio alojamiento, lo que le permitio mantenerse abierto en todo momento. En adicion, tambien disponiamos de un "FastDL" lo que permitia a los jugadores descargar rapidamente los archivos necesarios para conectarse al servidor. Perdimos ese privilegio y hemos perdido no solo el alojamiento de ese servidor, sino que tambien perdimos el FastDL, haciendo las descargas mucho mas lentas.
 
@@ -87,7 +85,7 @@ Compilar todo el proyecto no es tan dificil como parece. Aun asi, ten en cuenta 
 
 Los **map scripts** son **delicados**: Todos los scripts de este tipo estan entrelazos entre si, lo que significa que si la compilacion de uno de estos scripts falla, **_todos los demas scripts tambien fallaran_**. Asegurate que no haya errores de codigo!
 
-> Para compilar la seccion de plugins
+#### Para compilar la seccion de plugins
 
 ### Plugins AngelScript (Extension .as):
 Para compilar estos plugins solo basta con subir los nuevos archivos al servidor, cuya ubicacion es **svencoop/scripts/plugins**. Hecho eso se debe editar el archivo **default_plugins.txt** ubicado en la carpeta **svencoop** BASE. Y agregar nuestro plugin a la lista, esto solo se hace una vez, y estas nuevas entradas en la lista se deben ver de la siguiente manera:
@@ -128,7 +126,7 @@ Cuando quieras recompilar los plugins, copia los nuevos .sma a la carpeta, ejecu
 
 Lamentablemente si las compilaciones fallan, estos no son exportados a un archivo .log el cual poder inspeccionar, deberas leer la ventana de la terminal para identificar y corregir fallos que se presenten. No obstante, si tienes buen conocimiento de los archivos .bat puedes editar las lineas y exportar manualmente el proceso de compilacion a un archivo para que sus errores sean legibles ahi.
 
-> Para compilar la seccion de map scripts
+#### Para compilar la seccion de map scripts
 
 Copia todos los archivos y carpetas a **svencoop/scripts/maps**, luego dirijite a la carpeta **configs/maps** de este repositorio. Segun la categoria de mapas que se quiera jugar se deben utilizar diferentes scripts. Por ejemplo, para la categoria HL, crea una copia de las plantillas **hl_!template.cfg** y **hl_!template_skl.cfg** y luego dale el nombre del mapa a estos nuevos archivos. Para nuestro ejemplo: **hl_crossfire.cfg** y **hl_crossfire_skl.cfg**.
 
