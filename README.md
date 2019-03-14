@@ -83,3 +83,57 @@ El proyecto solamente contendra el codigo fuente, no provere de los sonidos/mode
 
 Si decides compilar y utilizar los codigos para tu propio uso tendras que inventar sus propios archivos adicionales que el proyecto utilize, o bien desactivarlos por completo.
 ## Instrucciones de compilacion/instalacion
+Compilar todo el proyecto no es tan dificil como parece. Aun asi, ten en cuenta la siguiente advertencia:
+
+Los **map scripts** son **delicados**: Todos los scripts de este tipo estan entrelazos entre si, lo que significa que si la compilacion de uno de estos scripts falla, **_todos los demas scripts tambien fallaran_**. Asegurate que no haya errores de codigo!
+
+> Para compilar la seccion de plugins
+
+### Plugins AngelScript (Extension .as):
+Para compilar estos plugins solo basta con subir los nuevos archivos al servidor, cuya ubicacion es **svencoop/scripts/plugins**. Hecho eso se debe editar el archivo **default_plugins.txt** ubicado en la carpeta **svencoop** BASE. Y agregar nuestro plugin a la lista, esto solo se hace una vez, y estas nuevas entradas en la lista se deben ver de la siguiente manera:
+
+```
+"plugin"
+{
+  "name" "TDM"
+  "script" "TPvP"
+}
+```
+Finalmente, vamos a la consola del servidor y escribimos el comando **as_reloadplugin "TDM"** para recompilar el plugin. -*Es posible que sea necesario cambiar el mapa para que la compilacion se lleve a cabo*-. Si solamente recompilar el plugin de esta lista, resubimos el archivo y escribimos nuevamente el mismo comando en la consola del servidor.
+
+Dare enfasis a las palabras **consola del servidor**, si estas usando un dedicado escribir los comandos "asinomas" no tendra efecto alguno, deberas escribir los comandos desde **RCON** para que sean enviados al servidor.
+
+Si la compilacion falla, los errores seran mostrados en la consola o bien en los logs del servidor, ubicado en **svencoop/logs/Angelscript** para su facil acceso.
+
+**_IMPORTANTE_**
+El proyecto no guardara ningun dato inicialmente hasta que sus carpeta de almacenamiento esten creada y haya acceso de lectura/escritura en ella. Ve a la carpeta **svencoop/scripts/plugins/store** y crea el siguientes directorio cuyo proposito es el siguiente:
+
+- **tdm_data**: Niveles, Creditos, y otros datos de los jugadores. De suma importancia para el plugin principal.
+
+### Plugins AMXX (Extension .sma):
+El codigo de estos plugins fue escrito en AMXX 1.8.3 (Ahora 1.9). Debes descargar/instalar esas versiones experimentales del AMXX para poder compilarlos.
+
+Hecho eso, copiamos nuestros archivos .sma a **addons/amxmodx/scripting**. Ahora, debemos ejecutar una linea de comandos en el simbolo de sistema. Asegurate que la terminal este apuntando al directorio mencionado anteriormente y ejecuta el siguiente comando: **amxxpc.exe TPvP_Helper.sma** y luego **amxxpc.exe GHW_Custom_Nextmap.sma**. Si la compilacion es existosa, el programa creara su ficheros compilados con extension **.amxx**. Estos nuevos archivos son subidos al servidor, en **addons/amxmodx/plugins**. Finalmente agregamos estos nuevos plugins a la lista de plugins AMXX, cuyo archivo de configuracion **plugins.ini** se encuentra en **addons/amxmodx/config**. Solo nos vamos al final del fichero y agregamos dos lineas, que seran TPvP_Helper.amxx y GHW_Custom_Nextmap.amxx. Hecho! Si queremos recompilar los plugins solo modificamos el archivo .sma, compilamos y copiamos el nuevo archivo .amxx al servidor. -*Todos los cambios que realizemos solo tomaran efecto al cambiar de mapa*-.
+
+Si no queremos utilizar el simbolo del sistema puedes crear un archivo **.bat** para simplificar la tarea. Que puede armarse de la manera siguiente: Crea un archivo .bat en **addons/amxmodx/scripting**, edita su contenido y agrega las siguientes lineas:
+
+```
+@echo off
+amxxpc.exe TPvP_Helper.sma
+amxxpc.exe GHW_Custom_Nextmap.sma
+pause
+```
+
+Cuando quieras recompilar los plugins, copia los nuevos .sma a la carpeta, ejecuta el .bat, y si la compilacion es exitosa tendras tus nuevos .amxx para utilizar.
+
+Lamentablemente si las compilaciones fallan, estos no son exportados a un archivo .log el cual poder inspeccionar, deberas leer la ventana de la terminal para identificar y corregir fallos que se presenten. No obstante, si tienes buen conocimiento de los archivos .bat puedes editar las lineas y exportar manualmente el proceso de compilacion a un archivo para que sus errores sean legibles ahi.
+
+> Para compilar la seccion de map scripts
+
+Copia todos los archivos y carpetas a **svencoop/scripts/maps**, luego dirijite a la carpeta **configs/maps** de este repositorio. Segun la categoria de mapas que se quiera jugar se deben utilizar diferentes scripts. Por ejemplo, para la categoria HL, crea una copia de las plantillas **hl_!template.cfg** y **hl_!template_skl.cfg** y luego dale el nombre del mapa a estos nuevos archivos. Para nuestro ejemplo: **hl_crossfire.cfg** y **hl_crossfire_skl.cfg**.
+
+Notaras como al final de uno de los archivos se encuentra la directiva **map_script TPVP_HLMap.as**. Este es el script de los mapas HL que se encargara de sus armas y demas codigos adicionales, la compilacion ocurrira automaticamente cuando el mapa se ejecute en el servidor. Si la compilacion es exitosa, todo listo! Si la compilacion falla, notaras que no empiezas con armas, la falta de armas debe ser tu primera señal de una compilacion fallida; Recuerda la advertencia anterior, si un map script falla, todo lo demas fallara. Afortunadamente, los map scripts tambien muestran sus errores de compilacion en el mismo directorio de registros, asi que puedes ir a **svencoop/logs/Angelscript** para revisar que ha sucedido.
+# Finalizando
+Habra muchos scripts y codigos diferentes en este proyecto pero no dejes que eso te asuste. Se que puedes hacer un buen trabajo.
+
+Good luck, and have fun!
