@@ -74,7 +74,7 @@ Si decides compilar y utilizar los codigos para tu propio uso tendras que invent
 ## Instrucciones de compilacion/instalacion
 Compilar todo el proyecto no es tan dificil como parece. Aun asi, ten en cuenta la siguiente advertencia:
 
-Los **map scripts** son **delicados**: Todos los scripts de este tipo estan entrelazos entre si, lo que significa que si la compilacion de uno de estos scripts falla, **_todos los demas scripts tambien fallaran_**. Asegurate que no haya errores de codigo!
+Los **map scripts** son **delicados**: Todos los scripts de este tipo estan entrelazados entre si, lo que significa que si la compilacion de uno de estos scripts falla, **_todos los demas scripts tambien fallaran_**. Asegurate que no haya errores de codigo!
 
 ## Para compilar la seccion de plugins
 
