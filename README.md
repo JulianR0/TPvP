@@ -14,16 +14,7 @@ Este proyecto surgio en las primeras actualizaciones de Sven Co-op, lo que signi
 AngelScript carece de ciertas utilidades especificas que solo el AMX Mod X tiene. No repetire el mismo texto tres veces asi que ire al grano. El proyecto requiere del hookeo de comandos y mensajes especificos del motor que solo AMXX provee. Siendo los mas primordiales **register_clcmd** y *register_message* para hookear mensajes **SVC_TEMPENTITY**. Los desarrolladores jamas van a implementar tales funciones al AngelScript por razones que no escribire aca ya que se volveria en un "rant".
 ## Porque mezclar plugins y map scripts?
 Antiguamente, era la unica forma de hacer funcionar los scripts de armas en los mapas, ya que en el pasado, no se podian registrar entidades personalizadas en un plugin. Hoy en dia es posible pero aun asi decidi dejarlo por separado por razones de comodidad, y no hablo por mi mismo, sino por los jugadores que entren a los servidores. Ya veras de lo que estoy hablando.
-## Que ocurrio con el servidor Team DeathMatch?
-Antes de los cortes de presopuesto, el servidor tenia su propio alojamiento, lo que le permitio mantenerse abierto en todo momento. En adicion, tambien disponiamos de un "FastDL" lo que permitia a los jugadores descargar rapidamente los archivos necesarios para conectarse al servidor. Perdimos ese privilegio y hemos perdido no solo el alojamiento de ese servidor, sino que tambien perdimos el FastDL, haciendo las descargas mucho mas lentas.
 
-Y hablando de descargas, recuerdas que dije porque no uni los map scripts en un unico plugin? Por las descargas, si dejase todas las armas en forma de plugins, los jugadores tendrian que descargar montones de models, sonidos, sprites, etc; Representando a todas las armas que utilize el servidor, los jugadores de la generacion de ahora son extremadamente cortoplacistas, nadie va a esperar tanto tiempo en descargar tantas armas solo para que se use una fraccion de ellas segun el mapa actual del servidor, aun menos si ya no disponemos FastDL!
-
-Porque no pedi a mis superiores un espacio extra para montar este servidor?
-
-Bromeas, verdad? No puedo ir a hablar alla arriba y decir: **HOLA QUIERO UN TERCER SERVIDOR KTHXBAI** y esperar que todo marche bien, O bien que no tenga que dar algo a cambio como apoyo financiero -*a mi no me va tan bien economicamente!*-. Peor aun pedir dos cosas a la vez al solicitar tambien un FastDL. ISC se volveria una comunidad con demasiados privilegios a comparacion del resto de IFPS y no solo es injusto, sino que tambien es aprovecharme de la situacion, es tener demasiado a cambio de nada. No corri ese riesgo por temor a perder mi puesto.
-
-~~Aunque, si hubiese estado alcoholizado tal vez hubiese corrido tal riesgo... tal vez...~~
 ## Archivos del proyecto
 Vale, esto es complejo. Vayamos por partes, vamos primero a los plugins, que es sencillo.
 
